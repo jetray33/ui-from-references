@@ -1,0 +1,221 @@
+{
+  "meta": {
+    "project": "pokerhouse-client",
+    "version": "0.1.0",
+    "outputRoot": "public/assets",
+    "imageModel": "openai/gpt-5.4-image-2"
+  },
+  "icons": {
+    "navigation": [
+      {
+        "name": "Menu",
+        "screens": [
+          "c08-game-list",
+          "c16-deposit-landing"
+        ]
+      },
+      {
+        "name": "Home",
+        "screens": [
+          "c08-game-list",
+          "c16-deposit-landing"
+        ]
+      },
+      {
+        "name": "Wallet",
+        "screens": [
+          "c08-game-list",
+          "c16-deposit-landing"
+        ]
+      },
+      {
+        "name": "Gift",
+        "screens": [
+          "c08-game-list",
+          "c16-deposit-landing"
+        ]
+      },
+      {
+        "name": "User",
+        "screens": [
+          "c08-game-list",
+          "c16-deposit-landing"
+        ]
+      }
+    ],
+    "ui-controls": [
+      {
+        "name": "ChevronLeft",
+        "use": "c08 header back"
+      },
+      {
+        "name": "ChevronRight",
+        "use": "c16 payment row affordance"
+      },
+      {
+        "name": "X",
+        "use": "c16 close"
+      },
+      {
+        "name": "Search",
+        "use": "c08 header search"
+      },
+      {
+        "name": "LayoutGrid",
+        "use": "c08 header grid toggle"
+      },
+      {
+        "name": "AlertTriangle",
+        "use": "c16 warning notice"
+      }
+    ],
+    "feature": [
+      {
+        "name": "QrCode",
+        "use": "c16 PromptPay payment method"
+      },
+      {
+        "name": "Landmark",
+        "use": "c16 bank transfer payment method"
+      },
+      {
+        "name": "Coins",
+        "use": "c16 bonus indicator + USDT crypto method"
+      },
+      {
+        "name": "Wallet",
+        "use": "c16 TrueMoney method (color-overridden)"
+      }
+    ]
+  },
+  "images": [
+    {
+      "$comment": "Stub entry. In a production run, this would be generated via gpt-image-2. For the example we will use a CSS gradient placeholder in code and skip generation to stay cheap. Path is still declared so the manifest is structurally complete.",
+      "id": "game-mahjong-ways",
+      "path": "public/assets/game/mahjong-ways.png",
+      "aspect": "4:3",
+      "sizePx": "512x384",
+      "status": "generated",
+      "prompt": "Premium dark casino, neon-confident, image-led. Generate a 4:3 game thumbnail for a slot game called 'Mahjong Ways'. Palette: only #070707 bg, #111018 surface, #25F95C accent, #F5F5F7 text. Subject: stylized mahjong tile artwork, single hero element, centered, mythological/Asian motif, premium feel. No watermarks, no text overlays, no platform UI chrome. Edge-bleed composition; the thumbnail will be cropped into a 12px-radius card.",
+      "refs": [
+        ".sisyphus/refs/pokerhouse-1.png"
+      ],
+      "consumedBy": [
+        "c08-game-list"
+      ]
+    },
+    {
+      "id": "game-lucky-neko",
+      "path": "public/assets/game/lucky-neko.png",
+      "aspect": "4:3",
+      "sizePx": "512x384",
+      "status": "generated",
+      "prompt": "Premium dark casino slot thumbnail, 'Lucky Neko'. Subject: stylized maneki-neko fortune cat, single hero element, centered, gold/orange highlight inside the artwork. Same palette constraints as the design DNA. Edge-bleed; 12px-radius card crop.",
+      "refs": [
+        ".sisyphus/refs/pokerhouse-1.png"
+      ],
+      "consumedBy": [
+        "c08-game-list"
+      ]
+    },
+    {
+      "id": "game-sweet-bonanza",
+      "path": "public/assets/game/sweet-bonanza.png",
+      "aspect": "4:3",
+      "sizePx": "512x384",
+      "status": "generated",
+      "prompt": "Premium dark casino slot thumbnail, 'Sweet Bonanza'. Subject: stylized candy cluster, pink/magenta highlight inside the artwork. Same palette constraints. Edge-bleed; 12px-radius card crop.",
+      "refs": [
+        ".sisyphus/refs/pokerhouse-1.png"
+      ],
+      "consumedBy": [
+        "c08-game-list"
+      ]
+    },
+    {
+      "id": "game-wild-west-gold",
+      "path": "public/assets/game/wild-west-gold.png",
+      "aspect": "4:3",
+      "sizePx": "512x384",
+      "status": "generated",
+      "prompt": "Premium dark casino slot thumbnail, 'Wild West Gold'. Subject: stylized cowboy/saloon motif, amber/orange highlight inside the artwork. Edge-bleed; 12px-radius card crop.",
+      "refs": [
+        ".sisyphus/refs/pokerhouse-1.png"
+      ],
+      "consumedBy": [
+        "c08-game-list"
+      ]
+    },
+    {
+      "id": "game-treasures-of-aztec",
+      "path": "public/assets/game/treasures-of-aztec.png",
+      "aspect": "4:3",
+      "sizePx": "512x384",
+      "status": "generated",
+      "prompt": "Premium dark casino slot thumbnail, 'Treasures of Aztec'. Subject: stylized Aztec mask/temple motif, green/jade highlight inside the artwork. Edge-bleed; 12px-radius card crop.",
+      "refs": [
+        ".sisyphus/refs/pokerhouse-1.png"
+      ],
+      "consumedBy": [
+        "c08-game-list"
+      ]
+    },
+    {
+      "id": "game-caishen-wins",
+      "path": "public/assets/game/caishen-wins.png",
+      "aspect": "4:3",
+      "sizePx": "512x384",
+      "status": "generated",
+      "prompt": "Premium dark casino slot thumbnail, 'Caishen Wins'. Subject: stylized Caishen (god of wealth) motif, red/crimson highlight inside the artwork. Edge-bleed; 12px-radius card crop.",
+      "refs": [
+        ".sisyphus/refs/pokerhouse-1.png"
+      ],
+      "consumedBy": [
+        "c08-game-list"
+      ]
+    },
+    {
+      "id": "game-big-bass-bonanza",
+      "path": "public/assets/game/big-bass-bonanza.png",
+      "aspect": "4:3",
+      "sizePx": "512x384",
+      "status": "generated",
+      "prompt": "Premium dark casino slot thumbnail, 'Big Bass Bonanza'. Subject: stylized fishing/big bass motif, blue/cyan highlight inside the artwork. Edge-bleed; 12px-radius card crop.",
+      "refs": [
+        ".sisyphus/refs/pokerhouse-1.png"
+      ],
+      "consumedBy": [
+        "c08-game-list"
+      ]
+    },
+    {
+      "id": "game-fortune-tiger",
+      "path": "public/assets/game/fortune-tiger.png",
+      "aspect": "4:3",
+      "sizePx": "512x384",
+      "status": "generated",
+      "prompt": "Premium dark casino slot thumbnail, 'Fortune Tiger'. Subject: stylized tiger motif, orange/amber highlight inside the artwork. Edge-bleed; 12px-radius card crop.",
+      "refs": [
+        ".sisyphus/refs/pokerhouse-1.png"
+      ],
+      "consumedBy": [
+        "c08-game-list"
+      ]
+    },
+    {
+      "id": "game-starlight-princess",
+      "path": "public/assets/game/starlight-princess.png",
+      "aspect": "4:3",
+      "sizePx": "512x384",
+      "status": "generated",
+      "prompt": "Premium dark casino slot thumbnail, 'Starlight Princess'. Subject: stylized princess/celestial motif, lavender/purple highlight inside the artwork. Edge-bleed; 12px-radius card crop.",
+      "refs": [
+        ".sisyphus/refs/pokerhouse-1.png"
+      ],
+      "consumedBy": [
+        "c08-game-list"
+      ]
+    }
+  ],
+  "$generation_notes": "All 9 game thumbnails are stubbed for this example to avoid spending generation budget on demo content. In a production run, set status to 'pending' and invoke prompts/image-asset.md per entry. The code template (game-tile.tsx) uses a CSS gradient fallback while status === 'stub', so the screens render visually correctly without real PNGs."
+}
