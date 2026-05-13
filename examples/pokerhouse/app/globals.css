@@ -6,6 +6,9 @@
  * Edit only by re-running Phase 1 (LOCK).
  */
 @theme {
+  /* spacing base — every unit is 0.25rem (4px). Lets pb-22, h-13, gap-1.5 etc. resolve. */
+  --spacing: 0.25rem;
+
   /* colors */
   --color-bg-base: #070707;
   --color-bg-raised: #111018;

@@ -13,3 +13,9 @@
 # OS metadata that might appear in example outputs
 **/__pycache__/
 *.pyc
+
+# Vite / Node — runnable example build artifacts
+**/node_modules/
+**/dist/
+**/.vite.log
+**/.vite/
