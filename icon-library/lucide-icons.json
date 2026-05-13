@@ -1,0 +1,565 @@
+{
+  "$comment": "Curated Lucide icon subset for the ui-from-references skill. ~120 icons covering 95% of UI needs. Every icon listed here MUST be importable from 'lucide-react' as a PascalCase named export. Tags are for semantic lookup.",
+  "library": "lucide-react",
+  "version": ">=0.400.0",
+  "importPattern": "import { <Name> } from 'lucide-react';",
+  "defaultSizes": [16, 20, 24, 32],
+  "icons": [
+    {
+      "name": "Menu",
+      "tags": ["hamburger", "menu", "nav"],
+      "categories": ["nav"]
+    },
+    {
+      "name": "X",
+      "tags": ["close", "dismiss", "cancel"],
+      "categories": ["control"]
+    },
+    {
+      "name": "ChevronLeft",
+      "tags": ["back", "previous", "left"],
+      "categories": ["control"]
+    },
+    {
+      "name": "ChevronRight",
+      "tags": ["forward", "next", "right", "list-affordance"],
+      "categories": ["control"]
+    },
+    {
+      "name": "ChevronUp",
+      "tags": ["expand", "up"],
+      "categories": ["control"]
+    },
+    {
+      "name": "ChevronDown",
+      "tags": ["collapse", "down", "dropdown"],
+      "categories": ["control"]
+    },
+    {
+      "name": "ArrowLeft",
+      "tags": ["back"],
+      "categories": ["control"]
+    },
+    {
+      "name": "ArrowRight",
+      "tags": ["forward", "submit"],
+      "categories": ["control"]
+    },
+    {
+      "name": "ArrowUp",
+      "tags": ["increase"],
+      "categories": ["control"]
+    },
+    {
+      "name": "ArrowDown",
+      "tags": ["decrease"],
+      "categories": ["control"]
+    },
+    {
+      "name": "Plus",
+      "tags": ["add", "create", "new"],
+      "categories": ["control"]
+    },
+    {
+      "name": "Minus",
+      "tags": ["remove", "subtract"],
+      "categories": ["control"]
+    },
+    {
+      "name": "Search",
+      "tags": ["find", "magnify", "lookup"],
+      "categories": ["control"]
+    },
+    {
+      "name": "Filter",
+      "tags": ["filter", "refine"],
+      "categories": ["control"]
+    },
+    {
+      "name": "LayoutGrid",
+      "tags": ["grid", "tiles"],
+      "categories": ["control"]
+    },
+    {
+      "name": "List",
+      "tags": ["list", "rows"],
+      "categories": ["control"]
+    },
+    {
+      "name": "SlidersHorizontal",
+      "tags": ["settings", "adjust", "filters"],
+      "categories": ["control"]
+    },
+    {
+      "name": "MoreHorizontal",
+      "tags": ["more", "overflow"],
+      "categories": ["control"]
+    },
+    {
+      "name": "MoreVertical",
+      "tags": ["more", "kebab"],
+      "categories": ["control"]
+    },
+
+    {
+      "name": "Home",
+      "tags": ["home", "dashboard"],
+      "categories": ["nav"]
+    },
+    {
+      "name": "User",
+      "tags": ["profile", "account", "avatar"],
+      "categories": ["nav"]
+    },
+    {
+      "name": "Users",
+      "tags": ["friends", "team", "social"],
+      "categories": ["nav"]
+    },
+    {
+      "name": "Settings",
+      "tags": ["settings", "preferences", "cog"],
+      "categories": ["nav"]
+    },
+    {
+      "name": "Bell",
+      "tags": ["notifications", "alerts"],
+      "categories": ["nav"]
+    },
+    {
+      "name": "BellOff",
+      "tags": ["mute", "silenced"],
+      "categories": ["nav"]
+    },
+    {
+      "name": "Heart",
+      "tags": ["favorite", "like"],
+      "categories": ["action"]
+    },
+    {
+      "name": "Star",
+      "tags": ["rating", "favorite", "feature"],
+      "categories": ["action"]
+    },
+    {
+      "name": "Bookmark",
+      "tags": ["save", "bookmark"],
+      "categories": ["action"]
+    },
+    {
+      "name": "Share",
+      "tags": ["share"],
+      "categories": ["action"]
+    },
+    {
+      "name": "Share2",
+      "tags": ["share", "external"],
+      "categories": ["action"]
+    },
+    {
+      "name": "Download",
+      "tags": ["download", "save"],
+      "categories": ["action"]
+    },
+    {
+      "name": "Upload",
+      "tags": ["upload"],
+      "categories": ["action"]
+    },
+    {
+      "name": "Copy",
+      "tags": ["copy", "duplicate"],
+      "categories": ["action"]
+    },
+    {
+      "name": "Trash2",
+      "tags": ["delete", "remove"],
+      "categories": ["action"]
+    },
+    {
+      "name": "Edit",
+      "tags": ["edit", "pencil"],
+      "categories": ["action"]
+    },
+    {
+      "name": "Edit2",
+      "tags": ["edit", "pencil-alt"],
+      "categories": ["action"]
+    },
+    {
+      "name": "Check",
+      "tags": ["confirm", "done"],
+      "categories": ["status"]
+    },
+    {
+      "name": "CheckCircle",
+      "tags": ["success", "confirmed"],
+      "categories": ["status"]
+    },
+    {
+      "name": "CheckCircle2",
+      "tags": ["success", "filled"],
+      "categories": ["status"]
+    },
+    {
+      "name": "Circle",
+      "tags": ["empty", "radio"],
+      "categories": ["status"]
+    },
+    {
+      "name": "AlertTriangle",
+      "tags": ["warning", "caution"],
+      "categories": ["status"]
+    },
+    {
+      "name": "AlertCircle",
+      "tags": ["alert", "warning"],
+      "categories": ["status"]
+    },
+    {
+      "name": "Info",
+      "tags": ["info", "help"],
+      "categories": ["status"]
+    },
+    {
+      "name": "XCircle",
+      "tags": ["error", "rejected"],
+      "categories": ["status"]
+    },
+    {
+      "name": "HelpCircle",
+      "tags": ["help", "question"],
+      "categories": ["status"]
+    },
+    {
+      "name": "Loader2",
+      "tags": ["loading", "spinner"],
+      "categories": ["status"]
+    },
+
+    {
+      "name": "Wallet",
+      "tags": ["wallet", "balance", "money"],
+      "categories": ["money"]
+    },
+    {
+      "name": "CreditCard",
+      "tags": ["card", "payment"],
+      "categories": ["money"]
+    },
+    {
+      "name": "Coins",
+      "tags": ["coins", "bonus", "rewards"],
+      "categories": ["money"]
+    },
+    {
+      "name": "DollarSign",
+      "tags": ["money", "currency"],
+      "categories": ["money"]
+    },
+    {
+      "name": "Banknote",
+      "tags": ["cash", "money"],
+      "categories": ["money"]
+    },
+    {
+      "name": "Landmark",
+      "tags": ["bank", "institution"],
+      "categories": ["money"]
+    },
+    {
+      "name": "PiggyBank",
+      "tags": ["savings"],
+      "categories": ["money"]
+    },
+    {
+      "name": "Receipt",
+      "tags": ["transaction", "history"],
+      "categories": ["money"]
+    },
+    {
+      "name": "ArrowUpRight",
+      "tags": ["withdraw", "outgoing"],
+      "categories": ["money"]
+    },
+    {
+      "name": "ArrowDownLeft",
+      "tags": ["deposit", "incoming"],
+      "categories": ["money"]
+    },
+
+    {
+      "name": "QrCode",
+      "tags": ["qr", "scan", "payment"],
+      "categories": ["payment-method"]
+    },
+    {
+      "name": "ScanLine",
+      "tags": ["scan"],
+      "categories": ["payment-method"]
+    },
+
+    {
+      "name": "Gift",
+      "tags": ["promo", "bonus", "reward"],
+      "categories": ["promo"]
+    },
+    {
+      "name": "Sparkles",
+      "tags": ["highlight", "magic", "new"],
+      "categories": ["promo"]
+    },
+    {
+      "name": "Crown",
+      "tags": ["vip", "premium", "rank"],
+      "categories": ["promo"]
+    },
+    {
+      "name": "Trophy",
+      "tags": ["win", "achievement"],
+      "categories": ["promo"]
+    },
+    {
+      "name": "Medal",
+      "tags": ["award", "rank"],
+      "categories": ["promo"]
+    },
+    {
+      "name": "Zap",
+      "tags": ["fast", "lightning", "boost"],
+      "categories": ["promo"]
+    },
+
+    {
+      "name": "Lock",
+      "tags": ["secure", "locked"],
+      "categories": ["security"]
+    },
+    {
+      "name": "Unlock",
+      "tags": ["unlocked"],
+      "categories": ["security"]
+    },
+    {
+      "name": "Eye",
+      "tags": ["show", "view"],
+      "categories": ["security"]
+    },
+    {
+      "name": "EyeOff",
+      "tags": ["hide"],
+      "categories": ["security"]
+    },
+    {
+      "name": "Shield",
+      "tags": ["protected", "security"],
+      "categories": ["security"]
+    },
+    {
+      "name": "ShieldCheck",
+      "tags": ["verified", "secure"],
+      "categories": ["security"]
+    },
+    {
+      "name": "Key",
+      "tags": ["password", "key"],
+      "categories": ["security"]
+    },
+    {
+      "name": "Fingerprint",
+      "tags": ["biometric", "auth"],
+      "categories": ["security"]
+    },
+    {
+      "name": "LogIn",
+      "tags": ["sign-in"],
+      "categories": ["security"]
+    },
+    {
+      "name": "LogOut",
+      "tags": ["sign-out"],
+      "categories": ["security"]
+    },
+
+    {
+      "name": "Phone",
+      "tags": ["call", "contact"],
+      "categories": ["contact"]
+    },
+    {
+      "name": "MessageCircle",
+      "tags": ["chat", "support"],
+      "categories": ["contact"]
+    },
+    {
+      "name": "Mail",
+      "tags": ["email"],
+      "categories": ["contact"]
+    },
+    {
+      "name": "Send",
+      "tags": ["send", "submit"],
+      "categories": ["contact"]
+    },
+
+    {
+      "name": "Calendar",
+      "tags": ["date", "schedule"],
+      "categories": ["time"]
+    },
+    {
+      "name": "Clock",
+      "tags": ["time"],
+      "categories": ["time"]
+    },
+    {
+      "name": "Timer",
+      "tags": ["countdown"],
+      "categories": ["time"]
+    },
+    {
+      "name": "History",
+      "tags": ["recent", "log"],
+      "categories": ["time"]
+    },
+    {
+      "name": "RefreshCw",
+      "tags": ["refresh", "retry"],
+      "categories": ["control"]
+    },
+
+    {
+      "name": "Gamepad2",
+      "tags": ["games", "play"],
+      "categories": ["games"]
+    },
+    {
+      "name": "Dices",
+      "tags": ["casino", "gamble", "luck"],
+      "categories": ["games"]
+    },
+    {
+      "name": "Spade",
+      "tags": ["poker", "card"],
+      "categories": ["games"]
+    },
+    {
+      "name": "Club",
+      "tags": ["poker", "card"],
+      "categories": ["games"]
+    },
+    {
+      "name": "Diamond",
+      "tags": ["poker", "card", "premium"],
+      "categories": ["games"]
+    },
+    {
+      "name": "Heart",
+      "tags": ["poker-card", "love"],
+      "categories": ["games"]
+    },
+    {
+      "name": "Target",
+      "tags": ["aim", "goal"],
+      "categories": ["games"]
+    },
+    {
+      "name": "Trophy",
+      "tags": ["win"],
+      "categories": ["games"]
+    },
+
+    {
+      "name": "Image",
+      "tags": ["picture", "photo"],
+      "categories": ["content"]
+    },
+    {
+      "name": "FileText",
+      "tags": ["document"],
+      "categories": ["content"]
+    },
+    {
+      "name": "Camera",
+      "tags": ["take-photo"],
+      "categories": ["content"]
+    },
+    {
+      "name": "Upload",
+      "tags": ["upload-file"],
+      "categories": ["content"]
+    },
+
+    {
+      "name": "ExternalLink",
+      "tags": ["external", "open"],
+      "categories": ["link"]
+    },
+    {
+      "name": "Link",
+      "tags": ["link", "url"],
+      "categories": ["link"]
+    },
+    {
+      "name": "Globe",
+      "tags": ["language", "web", "region"],
+      "categories": ["link"]
+    },
+
+    {
+      "name": "Wifi",
+      "tags": ["network"],
+      "categories": ["system"]
+    },
+    {
+      "name": "WifiOff",
+      "tags": ["offline"],
+      "categories": ["system"]
+    },
+    {
+      "name": "Battery",
+      "tags": ["battery"],
+      "categories": ["system"]
+    },
+    {
+      "name": "BatteryCharging",
+      "tags": ["charging"],
+      "categories": ["system"]
+    },
+    {
+      "name": "Volume2",
+      "tags": ["sound"],
+      "categories": ["system"]
+    },
+    {
+      "name": "VolumeX",
+      "tags": ["mute"],
+      "categories": ["system"]
+    },
+    {
+      "name": "Sun",
+      "tags": ["theme-light"],
+      "categories": ["system"]
+    },
+    {
+      "name": "Moon",
+      "tags": ["theme-dark"],
+      "categories": ["system"]
+    }
+  ],
+  "fallbacks": {
+    "$comment": "When a needed concept isn't in the subset above, propose one of these substitutes BEFORE adding to the library. Some examples:",
+    "TrueMoney": "Wallet (with project brand color)",
+    "promptpay": "QrCode",
+    "USDT/Crypto": "Coins (with project accent color)",
+    "thai-baht": "DollarSign (we accept the imperfection rather than custom-drawing ฿)",
+    "language-toggle": "Globe"
+  },
+  "addingNewIcons": [
+    "1. Check the full Lucide catalog: https://lucide.dev/icons",
+    "2. Confirm the name is exported by lucide-react",
+    "3. Add an entry to this JSON with name, tags, categories",
+    "4. Bump library/version if needed",
+    "5. Commit; ui-from-references skill will pick it up next run"
+  ]
+}
