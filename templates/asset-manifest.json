@@ -1,0 +1,53 @@
+{
+  "$schema": "./asset-manifest.schema.json",
+  "$comment": "Locked asset manifest. Every image referenced from any .tsx file MUST appear here. Every entry MUST be generated (or sourced) before Phase 3 begins.",
+
+  "meta": {
+    "project": "REQUIRED — same as design-tokens.json::meta.project",
+    "version": "REQUIRED — bumped on any asset change",
+    "outputRoot": "public/assets",
+    "imageModel": "openai/gpt-5.4-image-2"
+  },
+
+  "icons": {
+    "$comment": "Icons used by name. Must be present in icon-library/lucide-icons.json.",
+    "navigation": [
+      { "name": "Menu",     "screens": ["all-authed"] },
+      { "name": "Home",     "screens": ["all-authed"] },
+      { "name": "Wallet",   "screens": ["all-authed"] },
+      { "name": "Gift",     "screens": ["all-authed"] },
+      { "name": "User",     "screens": ["all-authed"] }
+    ],
+    "ui-controls": [
+      { "name": "ChevronLeft",  "use": "back navigation" },
+      { "name": "ChevronRight", "use": "list row affordance" },
+      { "name": "X",            "use": "dismiss / close" },
+      { "name": "Search",       "use": "search trigger" },
+      { "name": "LayoutGrid",   "use": "grid view toggle" },
+      { "name": "List",         "use": "list view toggle" },
+      { "name": "AlertTriangle","use": "warning notice" },
+      { "name": "Info",         "use": "info notice" },
+      { "name": "XCircle",      "use": "error notice" }
+    ],
+    "feature": [
+      { "name": "QrCode",       "use": "QR payment method icon" },
+      { "name": "Landmark",     "use": "bank transfer payment icon" },
+      { "name": "Coins",        "use": "balance / bonus indicator" }
+    ]
+  },
+
+  "images": [
+    {
+      "$comment": "Example entry. Replace with real entries from screen specs.",
+      "id": "splash-logo",
+      "path": "public/assets/brand/splash-logo.png",
+      "aspect": "1:1",
+      "sizePx": "1024x1024",
+      "prompt": "REQUIRED — verbatim text sent to gpt-5.4-image-2. Encode the design DNA: dark casino, neon green #25F95C accent on near-black #070707 background, minimal, premium feel.",
+      "refs": [
+        "OPTIONAL — array of reference image paths attached to the generation call"
+      ],
+      "consumedBy": ["c01-splash"]
+    }
+  ]
+}

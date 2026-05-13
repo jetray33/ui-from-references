@@ -1,0 +1,154 @@
+{
+  "$schema": "https://design-tokens.org/community-group/spec/format",
+  "$comment": "Locked design tokens. Single source of truth for code generation. Every numeric value is in pixels unless noted. Edit ONLY in a 'Lock' phase, NEVER mid-screen.",
+
+  "meta": {
+    "project": "REQUIRED — kebab-case project name, e.g. 'pokerhouse-client'",
+    "version": "REQUIRED — semver, bumped on any token change",
+    "locale": "REQUIRED — primary locale, e.g. 'th-TH'",
+    "viewport": {
+      "name": "REQUIRED — e.g. 'iPhone 15 Pro Max'",
+      "width": 440,
+      "height": 956,
+      "dpr": 3,
+      "$comment": "Logical CSS pixels. Generation pixels = logical × dpr."
+    }
+  },
+
+  "colors": {
+    "bg": {
+      "base": "REQUIRED — page background hex",
+      "raised": "REQUIRED — first elevation surface (cards)",
+      "elevated": "OPTIONAL — second elevation (popovers, sheets)",
+      "scrim": "OPTIONAL — modal backdrop rgba"
+    },
+    "border": {
+      "subtle": "REQUIRED — default border on surfaces",
+      "strong": "OPTIONAL — for emphasized dividers"
+    },
+    "text": {
+      "primary": "REQUIRED",
+      "secondary": "REQUIRED",
+      "muted": "OPTIONAL",
+      "inverse": "REQUIRED — text on filled accent buttons"
+    },
+    "accent": {
+      "primary": "REQUIRED — brand neon / CTA color",
+      "primary_pressed": "OPTIONAL — darker variant for pressed state",
+      "warning": "OPTIONAL — amber for cautions",
+      "danger": "OPTIONAL — red for destructive",
+      "success": "OPTIONAL — green for confirmations (if different from primary)"
+    },
+    "$comment": "All values are hex strings (#RRGGBB) or rgba() for transparent ones. No HSL. No CSS custom property references."
+  },
+
+  "typography": {
+    "fontFamily": {
+      "display": "REQUIRED — heading font stack, e.g. 'Kanit, sans-serif'",
+      "body": "REQUIRED — body font stack, e.g. 'Sarabun, sans-serif'",
+      "mono": "OPTIONAL — for numbers/code"
+    },
+    "scale": {
+      "display": { "size": 36, "weight": 700, "lineHeight": 1.2 },
+      "title":   { "size": 20, "weight": 700, "lineHeight": 1.3 },
+      "heading": { "size": 16, "weight": 700, "lineHeight": 1.4 },
+      "body":    { "size": 15, "weight": 400, "lineHeight": 1.5 },
+      "caption": { "size": 13, "weight": 400, "lineHeight": 1.4 },
+      "micro":   { "size": 11, "weight": 400, "lineHeight": 1.3 }
+    },
+    "$comment": "Sizes in px. Weights 400 (regular) or 700 (bold) only unless project explicitly demands more. Line-height is unit-less ratio."
+  },
+
+  "radius": {
+    "sm": 8,
+    "md": 12,
+    "card": 16,
+    "pill": 20,
+    "full": 9999
+  },
+
+  "spacing": {
+    "$comment": "Used in padding/gap. 4-pt grid.",
+    "0": 0,
+    "1": 4,
+    "2": 8,
+    "3": 12,
+    "4": 16,
+    "5": 20,
+    "6": 24,
+    "8": 32,
+    "10": 40,
+    "12": 48,
+    "16": 64
+  },
+
+  "effects": {
+    "shadow": {
+      "card": "OPTIONAL — e.g. '0 1px 0 rgba(255,255,255,0.04) inset'",
+      "popover": "OPTIONAL"
+    },
+    "glow": {
+      "accent": "OPTIONAL — e.g. '0 0 24px rgba(37,249,92,0.35)'"
+    }
+  },
+
+  "motion": {
+    "duration": {
+      "fast": 120,
+      "default": 200,
+      "slow": 320
+    },
+    "easing": {
+      "standard": "cubic-bezier(0.2, 0, 0, 1)",
+      "decelerate": "cubic-bezier(0, 0, 0, 1)"
+    },
+    "$comment": "Durations in ms."
+  },
+
+  "components": {
+    "button": {
+      "primary": {
+        "minHeight": 48,
+        "paddingX": 24,
+        "paddingY": 12,
+        "radius": "pill",
+        "bg": "accent.primary",
+        "text": "text.inverse",
+        "fontWeight": 700,
+        "fontSize": "body.size"
+      },
+      "secondary": {
+        "minHeight": 48,
+        "paddingX": 24,
+        "paddingY": 12,
+        "radius": "pill",
+        "bg": "bg.raised",
+        "border": "border.subtle",
+        "text": "text.primary",
+        "fontWeight": 700,
+        "fontSize": "body.size"
+      }
+    },
+    "card": {
+      "default": {
+        "bg": "bg.raised",
+        "border": "border.subtle",
+        "radius": "card",
+        "padding": 20
+      }
+    },
+    "input": {
+      "default": {
+        "minHeight": 56,
+        "paddingX": 16,
+        "paddingY": 16,
+        "radius": "md",
+        "bg": "bg.raised",
+        "border": "border.subtle",
+        "text": "text.primary",
+        "placeholder": "text.secondary"
+      }
+    },
+    "$comment": "Component templates resolve to concrete CSS via the Tailwind mapping. Reference values like 'accent.primary' to keep things DRY."
+  }
+}
