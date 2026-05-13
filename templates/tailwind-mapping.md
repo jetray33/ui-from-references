@@ -34,18 +34,12 @@ Target: **Tailwind v4** with `@theme` blocks (preferred) or v3 `theme.extend` (f
   --radius-pill: 20px;
   --radius-full: 9999px;
 
-  /* spacing — only if you DON'T want to use the default 4-pt scale */
-  --spacing-0: 0;
-  --spacing-1: 4px;
-  --spacing-2: 8px;
-  --spacing-3: 12px;
-  --spacing-4: 16px;
-  --spacing-5: 20px;
-  --spacing-6: 24px;
-  --spacing-8: 32px;
-  --spacing-10: 40px;
-  --spacing-12: 48px;
-  --spacing-16: 64px;
+  /* spacing base — MANDATORY in v4.
+     Without this, every spacing utility (pb-22, h-13, gap-1.5, size-6, etc.)
+     compiles to padding: calc(var(--spacing) * N) but resolves to 0 because
+     --spacing is undefined. Symptom: pb-22 shows as "padding-bottom: 0px" in
+     devtools even though the class IS in the generated CSS. */
+  --spacing: 0.25rem;
 
   /* typography */
   --font-display: 'Kanit', sans-serif;
@@ -158,6 +152,46 @@ After mapping, these classes work directly in `.tsx`:
 - ❌ `className="bg-[#070707]"` (arbitrary value syntax) — defeats the token system
 - ❌ Adding a new color in `tailwind.config.ts` without adding it to `design-tokens.json` first — config drifts from tokens
 - ❌ Using Tailwind's default `gray-500` etc. — only use project tokens
+- ❌ Omitting `--spacing: 0.25rem` from the v4 `@theme` block — silently zeros out every spacing utility
+
+## Known gotchas
+
+### v4: spacing utilities resolve to `0px` despite the class compiling
+
+**Symptom.** You wrote `<div className="pb-22 h-13">` and DevTools shows the element's `padding-bottom: 0px`, `height: 0px`. Inspecting the generated stylesheet reveals the class IS present:
+
+```css
+.pb-22 { padding-bottom: calc(var(--spacing) * 22); }
+.h-13  { height: calc(var(--spacing) * 13); }
+```
+
+But `var(--spacing)` is undefined, so the whole `calc()` evaluates to `0`.
+
+**Cause.** Tailwind v4 generates spacing utilities lazily for any numeric value, but it requires the `--spacing` base variable to be declared in your `@theme` block. The v3 pattern of declaring each step explicitly (`--spacing-1: 4px; --spacing-2: 8px; ...`) does NOT work for arbitrary numbers like `22` or `13` — only the steps you explicitly listed.
+
+**Fix.** Add this single line to your `@theme`:
+
+```css
+@theme {
+  --spacing: 0.25rem;
+  /* ... other tokens ... */
+}
+```
+
+With that one declaration, every numeric spacing utility resolves: `pb-22` → 5.5rem (88px), `gap-1.5` → 0.375rem (6px), `size-6` → 1.5rem (24px), etc.
+
+**Verification.** Open DevTools on any element with a spacing class. The computed style should match the expected pixel value. Or run in the console:
+
+```js
+getComputedStyle(document.documentElement).getPropertyValue('--spacing')
+// expected: ' 0.25rem'   (with leading space; that's normal)
+```
+
+If the value is empty, `--spacing` is missing from the `@theme` block.
+
+### v4: arbitrary-value classes still need the base too
+
+Even arbitrary classes like `pb-[88px]` or `mt-[12.5px]` bypass `--spacing` correctly. But mixing them with token-scale classes (`pb-22 mt-[12.5px]`) on the same element creates inconsistent design. Stick to the token scale.
 
 ## Adding a new token
 

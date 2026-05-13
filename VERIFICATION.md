@@ -98,12 +98,25 @@ for (const f of files) {
 
 ---
 
-## Layout Discipline (NON-BLOCKING but recommended)
+## Layout Discipline (BLOCKING — see "Tailwind v4 spacing" below)
 
 - [ ] Container max-width matches `design-tokens.json::meta.viewport.width`
 - [ ] Bottom nav, if present, is fixed and the main content has `pb-22` (or equivalent) so it isn't covered
 - [ ] No horizontal scroll on the target viewport
 - [ ] All buttons hit minimum 44×44px touch target
+- [ ] **`--spacing: 0.25rem` is declared in the `@theme` block** (v4 only) — without it, every spacing utility resolves to `0px`
+
+### Tailwind v4 spacing — quick sanity check
+
+Open DevTools console on the running app and run:
+
+```js
+getComputedStyle(document.documentElement).getPropertyValue('--spacing')
+```
+
+Must return a non-empty value (typically `' 0.25rem'`). If empty, `--spacing` is missing from `@theme` — see `templates/tailwind-mapping.md` → "Known gotchas".
+
+If the sanity check fails, EVERY spacing class (`pb-22`, `h-13`, `gap-1.5`, `size-6`) silently resolves to `0px` even though the class is in the generated stylesheet. This produces overlapping bottom nav, collapsed grids, and zero-sized icons — symptoms that look like layout bugs but are actually a single missing CSS variable.
 
 ---
 

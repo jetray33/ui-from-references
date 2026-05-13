@@ -146,6 +146,8 @@ A disciplined pipeline that turns creative references into production-ready Reac
    - `design-tokens.json::colors.bg.base` → `theme.extend.colors.bg.base`
    - `design-tokens.json::radius.card` → `theme.extend.borderRadius.card`
    - etc.
+
+   **Tailwind v4 only — REQUIRED `@theme` line.** Every v4 `@theme` block MUST include `--spacing: 0.25rem;` or every spacing utility (`pb-22`, `h-13`, `gap-1.5`, `size-6`, etc.) silently resolves to `0px`. See `templates/tailwind-mapping.md` → "Known gotchas" for the symptom and verification snippet. This is the single most common Phase 3 failure mode.
 2. **For each screen, write one `.tsx` file** using:
    - Tailwind classes that reference the tokens (`bg-bg-base`, `text-text-primary`)
    - shadcn primitives (`Button`, `Card`, `Input`) installed via `npx shadcn@latest add ...`
