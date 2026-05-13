@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Editor cruft
+*.swp
+*.swo
+
+# Logs and temp dirs from the image-generation pipeline
+**/tmp-prompts/
+**/*.raw.json
+**/*.raw.json.payload.json
+
+# OS metadata that might appear in example outputs
+**/__pycache__/
+*.pyc
